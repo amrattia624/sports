@@ -1,0 +1,583 @@
+<html>
+  <head>
+    <title>sports store - home</title>
+    <meta charset="utf-8"/>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background: #FFF5D0;
+        font-family: system-ui,arial;
+        text-transform: uppercase;
+      }
+      .header{
+        background: #0F222D;
+        width: 100%;
+        height:79px;
+        position: fixed;
+        z-index: 1;
+        z-index: 999;
+      }
+      .logo{
+        float:left;
+        width: 200px;
+        height:75px;
+        margin-top: 4px;
+        margin-right: 80px;
+        margin-left: 4px;
+      }
+      .list{
+        float:right;
+        margin-top: 10px;
+        width:200px;
+      }
+      .list img{
+        float:right;
+        margin-right: 10px;
+      }
+      .links{
+        text-decoration: none;
+        color:#FFF5D0;
+        font-size:16px;
+        text-align: center;
+        line-height: 80px;
+        padding:21px;
+        margin-left: -20px;
+        position: relative;
+        
+      }
+      .links:hover{
+        color:gold;
+        opacity: 0.9;
+        border-bottom:6px solid #DB3A34; 
+      }
+      .acount{
+        text-decoration: none;
+        color:gold;
+        font-size:16px;
+        text-align: center;
+        line-height: 80px;
+        padding:24px;
+        margin-left: 0px;
+      }
+      .acount:hover{
+        color:#DB3A34;
+      }
+      
+      .pasket{
+        padding: 7px 17px;
+        margin-left: 40px;
+        border:2px solid #FFF5D0;
+        border-radius: 50px;
+      }
+      .pasket:hover{
+       opacity: 0.6;
+      }
+      .hlogo:hover{
+        opacity: 0.9;
+      }
+      .header input[type=text]{
+        width:180px;
+        height:30px;
+        background: #FFF5D0;
+        border:none;
+        margin-left: 59px;
+        margin-right: -44px;
+        color:#0F222D;
+      }
+      .header input[type=button]{
+        width:40px;
+        height:30px;
+        border:none;
+        cursor: pointer;
+        background:#DB3A34;
+        color:#fff;
+        margin-right: 50px;
+      }
+      .header input[type=text]:hover{
+        margin-right: -4px;
+        opacity: 0.9;
+      }
+      .header input[type=button]:hover{
+        opacity: 0.6;
+      }
+      .list{
+        cursor: pointer;
+      }
+     
+      .smooth{
+      width:200px;
+      height:642px;
+      position: absolute;
+      background: #0F222D;
+      float:right;
+      margin-top:2px;
+      display: none;
+     }
+      .list:hover .smooth{
+        display: block;
+      }
+      .smooth span{
+       display: inline-block;
+       width:90%;
+       height:56px;
+       padding-right: 20px;
+       margin-top: 8px;
+      }
+      .smooth span:hover{
+       border-bottom:1px solid #FFC857;
+       border-top:1px solid #FFC857;
+       color:gold;
+       background: #DB3A34;
+      }
+      .smooth a{
+       text-decoration: none;
+       color:#FFF5D0;
+       font-size:18px;
+       line-height:54px;
+      }
+      c{
+       cursor: pointer;
+      }
+      c:hover .brand{
+       display: block;
+      }
+      .brand{
+       width:125px;
+       height:322px;
+       background: #0F222D;
+       margin-top:-9px;
+       margin-left: 620px;
+       position: absolute;
+       display: none;
+      
+      }
+      .brand a{
+       display: inline-block;
+       width:100%;
+       height:56px;
+       text-align: center;
+       margin-top: 8px;
+       text-decoration: none;
+       color:#FFF5D0;
+       font-size:18px;
+       line-height:54px;
+      
+      }
+      .brand a:hover{
+       border-bottom:1px solid #FFC857;
+       border-top:1px solid #FFC857;
+       color:gold;
+       background: #DB3A34;
+      
+       }
+      
+      .subject{
+       width:100%;
+       height:6500px; 
+      }
+      .liga{
+       width:821px;
+       height:100px;
+       margin: 65px auto;
+       position: relative;
+       text-align: center;
+       font-size: 30px;
+       z-index: 998;
+       
+      }
+      .liga:hover .liga1{
+        display: block;
+        background: gold;
+        border-radius: 10px;
+      }
+      .liga:hover .liga2{
+        display: block;
+        background: gold;
+        border-radius: 10px;
+      }
+      .liga:hover .liga3{
+        display: block;
+        background: gold;
+        border-radius: 10px;
+      }
+      .liga1{
+        width:950px;
+        height:100px;
+        position: absolute;
+        z-index: 3;
+        margin-left:-60px;
+        margin-top: 2px;
+        display: none;
+        padding-top:20px;
+        padding-bottom: 20px;
+      }
+      .liga a:hover{
+        opacity:0.6;
+      }
+      .liga2{
+        width:950px;
+        height:100px;
+        position: absolute;
+        z-index: 2;
+        margin-left: -60px;
+        margin-top: 120px;
+       display: none;
+       padding-top:20px;
+       padding-bottom: 20px;
+      }
+      .liga3{
+        width:950px;
+        height:100px;
+        position: absolute;
+        z-index: 1;
+        margin-left:-60px;
+        margin-top: 238px;
+        display: none;
+        padding-top:20px;
+        padding-bottom: 20px;
+      }
+    
+      .social1{
+       position: fixed;
+       top:300px;
+       width:150px;
+       height:40px;
+       background: #0F222D;
+       margin-left: -120px;
+       border:2px solid gold;
+       border-radius:  0 30px 30px 0;
+       color:#FFF5D0;
+       line-height: 36px;
+      }
+      .social1:hover{
+       margin-left: -2px;
+      }
+      .social2:hover{
+       margin-left: -2px;
+      }
+      .social3:hover{
+       margin-left: -2px;
+      }
+      .social4:hover{
+       margin-left: -2px;
+      }
+      .social2{
+       position: fixed;
+       top:345px;
+       width:150px;
+       height:40px;
+       background: #0F222D;
+       margin-left: -120px;
+       border:2px solid gold;
+       border-radius:  0 30px 30px 0;
+       color:#FFF5D0;
+       line-height: 36px;
+      }
+        
+      .social3{
+       position: fixed;
+       top:390px;
+       width:150px;
+       height:40px;
+       background: #0F222D;
+       margin-left: -120px;
+       border:2px solid gold;
+       border-radius:  0 30px 30px 0;
+       color:#FFF5D0;
+       line-height: 36px;
+      }
+      .social4{
+       position: fixed;
+       top:435px;
+       width:150px;
+       height:40px;
+       background: #0F222D;
+       margin-left: -120px;
+       border:2px solid gold;
+       border-radius:  0 30px 30px 0;
+       color:#FFF5D0;
+       line-height: 36px;
+      }
+      .adsleft{
+        float:left;
+        width:300px;
+        height:900px;
+        margin: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .adsleft img{
+        width:100%;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
+      .results{
+        float:right;
+        width:300px;
+        height:900px;
+        margin: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .results img{
+        width:100%;
+        margin-bottom: 20px;
+        margin-top:0;
+      }
+      .results div{
+        width:100%;
+        height:300px;
+        color:#0F222D;
+      }
+       .nateig span{
+        display: block;
+        background:#829c82;
+        height:40px;
+        text-align: center;
+        border-bottom: 1px solid #b9b7b7;
+       }
+      .project2{
+        width:733px;
+        height:601px;
+        margin:20px auto;
+        margin-bottom: 0;
+        float:left;
+        background: #0F222D;
+        
+        }
+      .project2 span:hover{
+        opacity: 0.8;
+        color:gold;
+      }
+      .project2 img:hover{
+        opacity: 0.8;
+      }
+      .project2 span{
+        display: inline-block;
+        width:673px;
+        height:91px;
+        font-size:20px;
+        font-family: system-ui;
+        padding: 30px;
+        color:#FFF5D0;
+        text-align: justify;
+      }
+      .footer{
+       width:100%;
+       height:400px;
+       background: #0F222D;
+       border-top:5px solid gold;
+      }
+      .footer div{
+       float:left;
+       width:300px;
+       height:100%;
+      }
+      .footer a{
+       text-decoration: none;
+       color:#FFF5D0;
+       font-size: 14px;
+       line-height: 27px;
+      }
+      .footer a:hover{
+       text-decoration: underline;
+       color:#FFF5D0;
+      }
+      .footerlogo a:hover{
+      opacity: 0.6;
+     }
+    </style>
+  </head>
+  <body dir="ltr">
+    <div class="header"><!--header-->
+      <a href="#" class="hlogo"><img src="logo.png" class="logo"/></a>
+      <div class="list"><img src="list.png"/><span style="color:#FFF5D0; font-size: 14px;margin-left: 75px;line-height: 57px;">League</span>
+        <div class="smooth" dir="rtl">
+            <a href="#"><span>champions league</span></a><br/>
+            <a href="#"><span>La Liga</span></a><br/>
+            <a href="#"><span>Premier League</span></a><br/>
+            <a href="#"><span>seria-a</span></a><br/>
+            <a href="#"><span>bundes lega</span></a><br/>
+            <a href="#"><span>League 1</span></a><br/>
+            <a href="#"><span>liga portugal</span></a><br/>
+            <a href="#"><span>world Cup</span></a><br/>
+            <a href="#"><span>euro</span></a><br/>
+            <a href="#"><span> copa america</span></a><br/>
+         </div>
+        </div>
+          <a href="home.html" class="links">home</a>
+          <a href="about.html" class="links">about</a>
+          <a href="contact.html" class="links">contact us</a>
+          <a href="gallery.html" class="links">gallery</a>
+          <c class="links">news
+              <div class="brand">
+                <a href="brands.html">Clubs</a><br/>
+                <a href="brands.html">Teams</a><br/>
+                <a href="brands.html">Players</a><br/>
+                <a href="brands.html">Race</a><br/>
+                <a href="brands.html">other</a><br/>
+              </div>
+          </c>
+          <input type="text" placeholder="what you need ?"/>
+          <input type="button" value="GO">
+          <a href="#" class="acount"> log in</a><span style="color:#FFF5D0"> | </span><a href="#" class="acount">sign up</a>
+          <a href="#" class="pasket" style="background: url(pasket.png) no-repeat;background-size: 33px 29px;"></a>
+      </div><br/><!--header-->
+      
+      <div class="subject">
+        <a href="#"><div class="social1"><img src="index/facesmall.png" style="float:right;margin-top:5px;"/>facebook</div></a>
+        <a href="#"><div class="social2"><img src="index/youtubesmall.png" style="float:right;margin-top:5px;"/>you tube</div></a>
+        <a href="#"><div class="social3"><img src="index/twitersmall.png" style="float:right;margin-top:5px;"/>twiter</div></a>
+        <a href="#"><div class="social4"><img src="index/gmailsmall.png" style="float:right;margin-top:5px;"/>gmail</div></a>
+        <div class="liga">
+          What is your favorite league ?<br>
+          <img src="1223.png"width="50px" height="50px"/>
+          <div class="liga1">
+          <a href="#"><img src="index/1.jpeg" width="150px" height="100%" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/3.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/4.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/6.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/15.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          </div>
+          <div class="liga2">
+          <a href="#"><img src="index/8.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/5.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/13.jfif" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/14.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/22.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          </div>
+          <div class="liga3">
+          <a href="#"><img src="index/12.png" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/16.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/23.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/11.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          <a href="#"><img src="index/9.jpg" width="150px" height="100" style="margin-right: 10px;"></a>
+          </div>
+        </div>
+        <div class="adsleft"><!--اعلانات-->
+          <a href="#"><img src="index/ads3.png"/></a><br/>
+          <a href="#"><img src="index/ads2.png"/></a><br/>
+          <a href="#"><img src="index/ads1.jfif"/></a><br/>
+        </div>
+        <div class="project2">
+          <a href="brands.html"><img src="index/cr7.jfif" width="100%" height="450px;"><span>Cristiano Ronaldo is ready for tomorrow's match with the Portuguese national team...</span></a>
+
+          <div class="project2">
+           <a href="brands.html"><img src="index/messi.jpg" width="100%" height="450px;"><span>After a frantic week of speculation, Lionel Messi has confirmed he will play for Barcelona next season despite his transfer request....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/Mbappe.jpg" width="100%" height="450px;"><span>Kylian Mbappe has been ruled out of France's Nations League game against World Cup runners-up Croatia on Tuesday after testing positive for Covid-19, national team management said Monday.....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/leporn.jpg" width="100%" height="450px;"><span>Living Legend is the equivalent of the legend Gordon number.....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/basket2.jpg" width="100%" height="450px;"><span>James Harden: Everything went wrong until series-winning block.....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/basket1.jpg" width="100%" height="450px;"><span>Bucks' Giannis out of Game 4 against Heat with ankle injury.....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/degocovic.jpg" width="100%" height="450px;"><span>US Open 2020: Djokovic, McEnroe, Kyrgios and the players to have been defaulted.....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/murray.jpg" width="100%" height="450px;"><span>US Open 2020: Murray rallies from two sets down to complete epic comeback.....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/vollyball.jpg" width="100%" height="450px;"><span>Australia achieve third win in 3-0 match over Tunisia.....</span></a>
+          </div>
+          <div class="project2">
+           <a href="brands.html"><img src="index/race.jpg" width="100%" height="450px;"><span>Hamilton leads the way as Mercedes dominate practice at Monza.....</span></a>
+          </div>
+          
+          
+          
+         </div>
+        <div class="results">
+          <a href="prands.html"><img src="index/lebron1.jpg"></a><br/>
+          <div class="nateig">
+          <h2 style="border: 1px solid #e8e8e8;background:#b9b9f1;height:40px;padding:20px">ligue 1</h2>
+          <span>SUNDAY 30 AUGUST</span>
+          <span>Brest 2-3 Marseille</span>
+          <span>St Etienne 2-0 Lorient</span>
+          <span>Nantes 2-1 Nîmes</span>
+          <span>Metz 0-1 Monaco</span>
+          <span>Angers 0-2 Bordeaux</span>
+          <span>Reims 0-1 Lille</span>
+          <span>SATURDAY 29 AUGUST</span>
+          <span>Strasbourg 0-2 Nice</span>
+          <span>Rennes 2-1 Montpellier</span>
+          <span>FRIDAY 28 AUGUST</span>
+          <span>Lyon 4-1 Dijon</span>
+          <span>SUNDAY 23 AUGUST</span>
+          <span>Nice 2-1 Lens</span>
+          <span>Nîmes 4-0 Brest</span>
+          <span>Lorient 3-1 Strasbourg</span>
+          <span>Monaco 2-2 Reims</span>
+          <span>SATURDAY 22 AUGUST</span>
+          <span>Lille 1-1 Rennes</span>
+          <span>Dijon 0-1 Angers</span>
+          <span>Bordeaux 0-0 Nantes</span>
+        
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footerlogo">
+          <a href="home.html"><img src="logo.png" style="margin:20px 60px;"/></a><br/>
+          <a href="home.html"><img src="index/face.png" width="50px"height="50px" style="margin-left:56px;"/></a>
+          <a href="home.html"><img src="index/twiter.png"width="50px"height="50px"/></a>
+          <a href="home.html"><img src="index/youtube.png"width="50px"height="50px"/></a>
+          <a href="home.html"><img src="index/gmail.png"width="50px"height="50px"/style="margin-left:87px;"></a>
+          <a href="home.html"><img src="index/whatsapp.png"width="50px"height="50px"/></a><br/><br/><br/>
+          <a href="home.html"><img src="index/location.png" style="margin-left:87px;"/>location</a>
+        </div>
+        <div class="footerproducts">
+          <h2 style="margin-top:40px; color:#FFF5D0">news</h2>
+          <a href="brands.html">Clubs</a><br/>
+          <a href="#">Teams</a><br/>
+          <a href="#">Players</a><br/>
+          <a href="#">Race</a><br/>
+          <a href="#">other</a><br/>
+        </div>
+        <div class="footersports">
+           <h2 style="margin-top:40px; color:#FFF5D0">sports</h2>
+          <a href="#">Soccer</a><br/>
+          <a href="#">Running</a><br/>
+          <a href="#">Basketball</a><br/>
+          <a href="#">Football</a><br/>
+          <a href="#">Outdoor</a><br/>
+          <a href="#">Golf</a><br/>
+          <a href="#">Baseball</a><br/>
+          <a href="#">Tennis</a><br/>
+          <a href="#">Skateboarding</a><br/>
+          <a href="#">Training</a><br/>
+        </div>
+        <div class="footercompanyinfo">
+          <h2 style="margin-top:40px; color:#FFF5D0">companyinfo</h2>
+          <a href="about.html">About Us</a><br/>
+          <a href="#">Students</a><br/>
+          <a href="#">adidas Stories</a><br/>
+          <a href="#">adidas Apps</a><br/>
+          <a href="#">Sustainability</a><br/>
+          <a href="#">Creators Club</a><br/>
+          <a href="#">Affiliates</a><br/>
+          <a href="#">Press</a><br/>
+          <a href="#">Careers</a><br/>
+          <a href="#">Gift Cards</a><br/>
+        </div>
+        <div class="footersupport">
+           <h2 style="margin-top:40px; color:#FFF5D0">support</h2>
+          <a href="contact.html">contact us</a><br/>
+          <a href="#">Returns & Exchanges</a><br/>
+          <a href="#">Help</a><br/>
+          <a href="#">Shipping</a><br/>
+          <a href="#">Order Tracker</a><br/>
+          <a href="#">Store Locator</a><br/>
+          <a href="#">Size Charts</a><br/>
+          <a href="#">Gift Card Balance</a><br/>
+        </div>
+      </div>
+  </body>
+</html>

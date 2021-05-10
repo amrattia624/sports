@@ -1,0 +1,630 @@
+<html>
+  <head>
+    <title>sports store - news</title>
+    <meta charset="utf-8"/>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background: #FFF5D0;
+        font-family: system-ui,arial;
+        text-transform: uppercase;
+      }
+      .header{
+        background: #0F222D;
+        width: 100%;
+        height:79px;
+        position: fixed;
+        z-index: 1;
+      }
+      .logo{
+        float:left;
+        width: 200px;
+        height:75px;
+        margin-top: 4px;
+        margin-right: 80px;
+        margin-left: 4px;
+      }
+      .list{
+        float:right;
+        margin-top: 10px;
+        width:200px;
+      }
+      .list img{
+        float:right;
+        margin-right: 10px;
+      }
+      .links{
+        text-decoration: none;
+        color:#FFF5D0;
+        font-size:16px;
+        text-align: center;
+        line-height: 80px;
+        padding:21px;
+        margin-left: -20px;
+        position: relative;
+        
+      }
+      .links:hover{
+        color:gold;
+        opacity: 0.9;
+        border-bottom:6px solid #DB3A34; 
+      }
+      .acount{
+        text-decoration: none;
+        color:gold;
+        font-size:16px;
+        text-align: center;
+        line-height: 80px;
+        padding:24px;
+        margin-left: 0px;
+      }
+      .acount:hover{
+        color:#DB3A34;
+      }
+      
+      .pasket{
+        padding: 7px 17px;
+        margin-left: 40px;
+        border:2px solid #FFF5D0;
+        border-radius: 50px;
+      }
+      .pasket:hover{
+       opacity: 0.6;
+      }
+      .hlogo:hover{
+        opacity: 0.9;
+      }
+      .header input[type=text]{
+        width:180px;
+        height:30px;
+        background: #FFF5D0;
+        border:none;
+        margin-left: 59px;
+        margin-right: -44px;
+        color:#0F222D;
+      }
+      .header input[type=button]{
+        width:40px;
+        height:30px;
+        border:none;
+        cursor: pointer;
+        background:#DB3A34;
+        color:#fff;
+        margin-right: 50px;
+      }
+      .header input[type=text]:hover{
+        margin-right: -4px;
+        opacity: 0.9;
+      }
+      .header input[type=button]:hover{
+        opacity: 0.6;
+      }
+      .list{
+        cursor: pointer;
+      }
+     
+     .smooth{
+      width:200px;
+      height:642px;
+      position: absolute;
+      background: #0F222D;
+      float:right;
+      margin-top:2px;
+      display: none;
+     }
+      .list:hover .smooth{
+        display: block;
+      }
+     .smooth span{
+      display: inline-block;
+      width:90%;
+      height:56px;
+      padding-right: 20px;
+      margin-top: 8px;
+     }
+     .smooth span:hover{
+      border-bottom:1px solid #FFC857;
+      border-top:1px solid #FFC857;
+      color:gold;
+      background: #DB3A34;
+     }
+     .smooth a{
+      text-decoration: none;
+      color:#FFF5D0;
+      font-size:18px;
+      line-height:54px;
+     }
+     c{
+      cursor: pointer;
+     }
+     c:hover .brand{
+      display: block;
+     }
+     .brand{
+      width:125px;
+      height:322px;
+      background: #0F222D;
+      margin-top:-9px;
+      margin-left: 620px;
+      position: absolute;
+      display: none;
+     }
+     .brand a{
+      display: inline-block;
+      width:100%;
+      height:56px;
+      text-align: center;
+      margin-top: 8px;
+      text-decoration: none;
+      color:#FFF5D0;
+      font-size:18px;
+      line-height:54px;
+     }
+     .brand a:hover{
+      border-bottom:1px solid #FFC857;
+      border-top:1px solid #FFC857;
+      color:gold;
+      background: #DB3A34;
+      }
+     
+     .subject{
+      width:100%;
+      height:12900px; 
+     }
+     h1{
+      color:#0F222D;
+      margin-top: 100px;
+      margin-left: 105px;
+     }
+     .project{
+      width:1300px;
+      height:98%;
+      margin:85px auto;
+      
+     }
+     .news{
+      width:100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background: #0F222D;
+      padding: 20px;
+      text-align: justify;
+     }
+     .news h2{
+      color:gold;
+     }
+     .news span{
+      color:gold;
+      opacity: 0.7;
+      line-height: 40px;
+     
+     }
+     .social1{
+      position: fixed;
+      top:300px;
+      width:150px;
+      height:40px;
+      background: #0F222D;
+      margin-left: -120px;
+      border:2px solid gold;
+      border-radius:  0 30px 30px 0;
+      color:#FFF5D0;
+      line-height: 36px;
+     }
+     .social1:hover{
+      margin-left: -2px;
+     }
+     .social2:hover{
+      margin-left: -2px;
+     }
+     .social3:hover{
+      margin-left: -2px;
+     }
+     .social4:hover{
+      margin-left: -2px;
+     }
+     .social2{
+      position: fixed;
+      top:345px;
+      width:150px;
+      height:40px;
+      background: #0F222D;
+      margin-left: -120px;
+      border:2px solid gold;
+      border-radius:  0 30px 30px 0;
+      color:#FFF5D0;
+      line-height: 36px;
+     }
+       
+     .social3{
+      position: fixed;
+      top:390px;
+      width:150px;
+      height:40px;
+      background: #0F222D;
+      margin-left: -120px;
+      border:2px solid gold;
+      border-radius:  0 30px 30px 0;
+      color:#FFF5D0;
+      line-height: 36px;
+     }
+    .social4{
+      position: fixed;
+      top:435px;
+      width:150px;
+      height:40px;
+      background: #0F222D;
+      margin-left: -120px;
+      border:2px solid gold;
+      border-radius:  0 30px 30px 0;
+      color:#FFF5D0;
+      line-height: 36px;
+     }
+       
+       
+       
+     .footer{
+      width:100%;
+      height:400px;
+      background: #0F222D;
+      border-top:5px solid gold;
+     }
+     .footer div{
+      float:left;
+      width:300px;
+      height:100%;
+     }
+     .footer a{
+      text-decoration: none;
+      color:#FFF5D0;
+      font-size: 14px;
+      line-height: 27px;
+     }
+     .footer a:hover{
+      text-decoration: underline;
+      color:#FFF5D0;
+     }
+      .footerlogo a:hover{
+      opacity: 0.6;
+     }
+    </style>
+  </head>
+  <body dir="ltr">
+    <div class="header"><!--header-->
+      <a href="#" class="hlogo"><img src="logo.png" class="logo"/></a>
+      <div class="list"><img src="list.png"/><span style="color:#FFF5D0; font-size: 14px;margin-left: 75px;line-height: 57px;">League</span>
+        <div class="smooth" dir="rtl">
+            <a href="#"><span>champions league</span></a><br/>
+            <a href="#"><span>La Liga</span></a><br/>
+            <a href="#"><span>Premier League</span></a><br/>
+            <a href="#"><span>seria-a</span></a><br/>
+            <a href="#"><span>bundes lega</span></a><br/>
+            <a href="#"><span>League 1</span></a><br/>
+            <a href="#"><span>liga portugal</span></a><br/>
+            <a href="#"><span>world Cup</span></a><br/>
+            <a href="#"><span>euro</span></a><br/>
+            <a href="#"><span> copa america</span></a><br/>
+         </div>
+        </div>
+          <a href="home.html" class="links">home</a>
+          <a href="about.html" class="links">about</a>
+          <a href="contact.html" class="links">contact us</a>
+          <a href="gallery.html" class="links">gallery</a>
+          <c class="links">news
+              <div class="brand">
+                <a href="brands.html">Clubs</a><br/>
+                <a href="brands.html">Teams</a><br/>
+                <a href="brands.html">Players</a><br/>
+                <a href="brands.html">Race</a><br/>
+                <a href="brands.html">other</a><br/>
+              </div>
+          </c>
+          <input type="text" placeholder="what you need ?"/>
+          <input type="button" value="GO">
+          <a href="#" class="acount"> log in</a><span style="color:#FFF5D0"> | </span><a href="#" class="acount">sign up</a>
+          <a href="#" class="pasket" style="background: url(pasket.png) no-repeat;background-size: 33px 29px;"></a>
+      </div><!--header-->
+      
+      <div class="subject">
+        <a href="#"><div class="social1"><img src="index/facesmall.png" style="float:right;margin-top:5px;"/>facebook</div></a>
+        <a href="#"><div class="social2"><img src="index/youtubesmall.png" style="float:right;margin-top:5px;"/>you tube</div></a>
+        <a href="#"><div class="social3"><img src="index/twitersmall.png" style="float:right;margin-top:5px;"/>twiter</div></a>
+        <a href="#"><div class="social4"><img src="index/gmailsmall.png" style="float:right;margin-top:5px;"/>gmail</div></a><br/>
+        <h1>news</h1>
+     <div class="project">
+      <div class="news">
+        <h2>Cristiano Ronaldo is ready for tomorrow's match with the Portuguese national team.</h2>
+        <img src="index/cr7.jfif"width="100%" height="650px;"/><br/>
+        <span>Today, Portuguese star Cristiano Ronaldo returned to training with members of his country’s national team after returning from injury in order to join them in the next match against Al-Suwaidi in one of the matches of the European Nations League .</span>
+      </div>
+      <div class="news">
+        <h2>Lionel Messi to stay at Barcelona</h2>
+        <img src="index/messi.jpg"width="100%" height="650px;"/><br/>
+        <span>Lionel Messi has announced he will stay at Barcelona because the financial outlay required to make his desired exit a reality was "impossible".
+
+              The Argentina superstar sent shockwaves through Camp Nou last week when he announced he wanted to leave Barca in the wake of the humiliating 8-2 loss to Bayern Munich in the Champions League quarter-finals.
+              
+              Messi was of the belief he could leave on a free transfer after activating a clause allowing him to terminate his contract at the end of the season, with Manchester City quickly emerging as favourites for his signature.
+              
+              LaLiga disputed that claim, though, and insisted any potential suitor would have to negotiate with Barca or pay the €700million release clause in Messi's contract, with his option to leave for nothing having expired on June 10.
+              
+              Messi's father and agent Jorge met Barca president Josep Maria Bartomeu to discuss the six-time Ballon d'Or winner's future on Wednesday, prior to which he stated it would be "difficult" for his son to stay.
+              
+              However, reports emerged after the meeting that a transfer for Messi would likely start a civil court case, while City were also said to be unable to do a deal if a transfer fee - even one significantly below the release clause - was involved. 
+              
+              Consequently, Messi confirmed on Friday he would not be moving because the option of a free transfer was no longer on the table.
+              
+              He told Goal Spain: "I thought and was sure that I was free to leave. The president always said that at the end of the season I could decide if I stayed or not.
+              
+              "Now they cling to the fact that I did not say it before June 10, when it turns out that on June 10 we were competing for LaLiga in the middle of this awful coronavirus, and this disease altered all the season.
+              
+              "This is the reason why I am going to continue with the club.
+
+              "Now I am going to continue because the president told me that the only way to leave was to pay the €700m clause, and this is impossible."</span>
+      </div>
+      <div class="news">
+        <h2>Mbappe to miss Croatia match after positive Covid-19 test</h2>
+        <img src="index/Mbappe.jpg"width="100%" height="650px;"/><br/>
+        <span>Kylian Mbappe has been ruled out of France's Nations League game against World Cup runners-up Croatia on Tuesday after testing positive for Covid-19, national team management said Monday , Mbappe, who took part in Monday evening's training session before learning the result of his test, is the seventh Paris Saint-Germain player to contract the virus. Neymar was among the first to test positive last week. </span>
+      </div>
+      
+      <div class="news">
+        <h2>Living Legend is the equivalent of the legend Gordon number.</h2>
+        <img src="index/leporn.jpg"width="100%" height="650px;"/><br/>
+        <span>"The King" LeBron James, the star of the Los Angeles Lakers, surpassed his idol, the Chicago Bulls legend Michael Jordan, in terms of the number of points scored in the history of the NBA.
+
+
+LeBron scored 31 points in the game that his Los Angeles Lakers lost to the Denver Nuggets by 99-115, at dawn today, Thursday.
+
+James reached the point (32.311 thousand points) in his career, to become in fourth place, surpassing Michael Jordan, who has now fallen to fifth place with a score of (32,292 thousand points).
+
+LeBron now surpasses Michael Jordan in the three main stats (points, assists and rebounds). In the picture below, we explain the differences between the players:</span>
+      </div>
+      
+       <div class="news">
+        <h2>James Harden: Everything went wrong until series-winning block</h2>
+        <img src="index/basket2.jpg"width="100%" height="650px;"/><br/>
+        <span>James Harden admitted he "was just doing everything that was not supposed to happen" before coming up with a vital series-winning block in Game 7 against the Oklahoma City Thunder.
+
+Houston Rockets superstar Harden had just 17 points on Wednesday after also failing to have an impact late in Game 6.
+
+The Thunder won on that occasion as Russell Westbrook was instead handed control of the team down the stretch and contributed costly clutch errors, prompting Chris Paul - Harden's ex-team-mate - to say: "Some people are built for it, some people shy away from it."
+
+But just as it looked as though Harden would come up short again, a block on Lu Dort denied the OKC rookie the chance to win the first-round series from three-point range in the closing seconds.
+
+"Physically, I felt like s*** - excuse my language," Harden told ESPN. "I couldn't make a shot, turned the ball over, was just doing everything that was not supposed to happen, but I just kept sticking with it.
+
+"My team-mates give me confidence throughout the game. Defensively I had to make a play and I closed it out to him. Dort has been making some shots, so I wanted to get out to him."
+
+Harden's defensive game has often been criticised but he said he had "been locked in all year long trying to be better" and "tried to find a way to impact the game".
+
+For that reason, he ranked the play - with his team 103-102 ahead - among the best of his outstanding NBA career.
+
+"It's one of the top ones, definitely," Harden, who reacted with a roar of delight, said afterwards to reporters.
+
+"It's cool to get 40 or 50 points, shooting the ball, shooting the ball - obviously we all want to do that - but just to get recognition and for it to pay off when it counts on the defensive end, showing that I've been engaged and locked in, means a lot."
+
+The final play was harsh on Dort, who went undrafted last year, only debuted in December and averaged just 6.8 points in the regular season but came up with a game-high 30 in the decider.
+
+The 21-year-old made six three-pointers but could not find a way past Harden at the last and threw the ball out of bounds when his shot was blocked.
+
+"I just kept my confidence. The way they were playing me, they were letting me shoot," Dort said. "Even though I had a couple of bad nights, I stepped up and shot it with confidence.
+
+"On the last one, I just didn't think he was that close but he was and he got it. It felt good and I was confident enough to take that shot, but he was just there and it was a good play from him."
+
+Harden said of his opponent: "I've known him since college, when I would go back to Arizona State, and he would work his butt off. It's showing.
+
+"He played extremely well tonight; on the offensive end, he made a lot of shots. He just plays his butt off. He doesn't care about anything but playing hard.
+
+"As a young guy, coming into this league, that's all you can ask for. Learning how to play and learning defensive schemes and offensive schemes, the total package of being an NBA player, that is going to come.
+
+"But he has the right mindset of just playing hard and not caring what anybody thinks. He's going to have a great career." </span>
+      </div>
+      
+       <div class="news">
+        <h2>Bucks' Giannis out of Game 4 against Heat with ankle injury</h2>
+        <img src="index/basket1.jpg"width="100%" height="650px;"/><br/>
+        <span>Giannis Antetokounmpo was ruled out of the rest of Game 4 between the Milwaukee Bucks and the Miami Heat due to a right ankle sprain in the NBA playoffs.
+
+Bucks star Antetokounmpo sustained the injury by tangling with Andre Iguodala with 10 minutes, 18 seconds remaining in the second period and left the game after shooting two free throws at Walt Disney World Resort on Sunday.
+
+Milwaukee confirmed during half-time that the reigning MVP would not return to the floor for the rest of the Eastern Conference semi-finals clash.
+
+Antetokounmpo appeared to be struggling with a right ankle injury during Game 3, which ended in a 115-100 defeat for the Bucks that sent them 3-0 down in the series.
+
+The top-seeded Bucks needed to win on Sunday to keep their hopes of reaching the Eastern Conference Finals alive.
+
+Antetokounmpo had started the game strongly in Orlando, scoring 19 points on eight-of-10 shooting to go with four rebounds and one steal. </span>
+      </div>
+      
+      
+      <div class="news">
+        <h2>US Open 2020: Djokovic, McEnroe, Kyrgios and the players to have been defaulted</h2>
+        <img src="index/degocovic.jpg"width="100%" height="650px;"/><br/>
+        <span>Novak Djokovic's latest opportunity to close in on Roger Federer's record for the most grand slams won by a male player ended in remarkable circumstances at the US Open on Sunday.
+
+With Federer and fellow legend Rafael Nadal absent in New York, Djokovic was the overwhelming favourite to move to 18 majors – just two shy of the Swiss great.
+
+But Djokovic was defaulted in his fourth-round match against Pablo Carreno Busta after hitting a linesperson with a ball.
+
+The Serbian, who had just dropped serve to fall 6-5 down in the first set, immediately apologised and another judge came over to help the woman who audibly gasped for air.
+
+Below we take a look at some of the most famous examples of players being defaulted on the ATP Tour.
+
+ 
+
+John McEnroe - January 1990
+
+McEnroe was playing the relatively unknown Swede Mikael Pernfors in the fourth round of the Australian Open but saw his tournament come to an end after three separate code violations. The then-world number one received his first for intimidating a linesperson, the second for racket abuse and his third for swearing at the umpire and the tournament referee. McEnroe was leading two sets to one at the time, wasting an opportunity to win a trophy he never managed to lift.
+
+Tim Henman - June 1995
+
+Wimbledon's cult hero Henman and doubles partner Jeremy Bates became the first players in the Open Era to be defaulted from the tournament after he accidentally fired a ball into the head of a ball-girl. Their doubles match with Jeff Tarango and Henrik Holm was in a fourth-set tie-break with Henman and Bates up two sets to one, and a disbelieving crowd booed the decision as the players were forced to leave Court 14.
+
+Stefan Koubek - June 2000, October 2007 and June 2010
+
+Djokovic at least cannot yet be grouped with Koubek, who was remarkably disqualified from the main draw three times in his tennis career. In the 2000 French Open he threw his racket and it hit a ballboy, and he had already received three warnings during the match. Seven years later Koubek was the subject of a straightforward default for using abusive language to Metz tournament supervisor Thomas Karlberg, although he protested the insult was "out of the situation and not against Karlberg personally". In 2010, the same man was sensationally disqualified from an Austria League match for grabbing opponent Daniel Kollerer by the throat at the changeover.
+
+David Nalbandian - June 2012
+
+Nalbandian's default cost him the title at Queen's Club, with his remarkable misdemeanour coming in the 2012 final against Marin Cilic. After losing a point, Nalbandian angrily kicked a nearby advertising board, hitting the linesperson sat behind it in the right leg. Although the player quickly sought to apologise, the injured man hopped around pointing at his bloody shin. "I'm very sorry," Nalbandian said, before adding to boos: "Sometimes we feel a lot of pressure from the ATP to play a lot of tournaments."
+
+Denis Shapovalov – February 2017
+
+Now regarded as one of the men's game's best emerging talents, Shapovalov had a moment to forget during a Davis Cup tie for Canada against the United Kingdom while aged 17 over three years ago. After dropping serve to trail Kyle Edmund 6-3 6-4 2-1, Shapovalov smashed the ball in annoyance and struck French umpire Arnaud Gabas in the eye. He later described himself as "incredibly ashamed and embarrassed" as the result meant Great Britain won the tie.
+
+Nick Kyrgios – May 2019
+
+One of the most naturally gifted but controversial players on the ATP Tour, it is little surprise to see Kyrgios' name appear on this list. The Australian reacted badly to receiving a game penalty for unsportsmanlike conduct in a second-round clash with Casper Ruud at the Italian Open. Kyrgios kicked out in disgust and launched a chair before walking off as he was disqualified by the umpire. </span>
+      </div>
+      
+      
+      <div class="news">
+        <h2>US Open 2020: Murray rallies from two sets down to complete epic comeback</h2>
+        <img src="index/murray.jpg"width="100%" height="650px;"/><br/>
+        <span>Andy Murray completed an astonishing comeback as the former world number one moved into the second round of the US Open with a remarkable five-set victory over Yoshihito Nishioka.
+
+Playing his first singles grand slam match since the 2019 Australian Open due to hip surgery and the coronavirus pandemic, Murray looked to be down and out when Nishioka raced into a two-set lead on Tuesday.
+
+Yet three-time slam champion Murray rallied to a stunning 4-6 4-6 7-6 (7-5) 7-6 (7-4) 6-4 triumph behind closed doors at Flushing Meadows in New York.
+
+Two tie-breaks went Murray's way in sets three and four, and a four-hour 39-minute epic was settled when a trademark lob from the Scot forced Nishioka into an overhit return.
+
+"I'm tired. My toes are the worst part I think, the big toes are pretty beat up, but I did alright," Murray – who will face Felix Auger-Aliassime or Thiago Monteiro in round two – said afterwards.
+
+"At the beginning of the match I was apprehensive about playing a long match, I was kind of pacing myself. I felt a bit like that at the start, but once I was two sets down I had to start putting the afterburners on.
+
+"They have [one ice bath] in the locker room, but they say it's for emergencies. It's an emergency for me right now! I'll ask if I can use that now, but if not I'll have to get back to the hotel quickly and recover because that's by far the most tennis I've played since the 2019 Australia Open."
+
+After a composed start from both players, it was Nishioka who forced the first break to take a 4-3 lead, and the 24-year-old claimed the set at the second attempt three games later.
+
+Japan's Nishioka hardly looked back and had the second set tied up in 53 minutes to put himself in complete control against the 2012 US Open winner.
+
+Murray's fight seemed to have drained when he conceded serve in game one of the next set – Nishioka moving into a 3-1 lead.
+
+Yet the 33-year-old Murray, who underwent hip resurfacing surgery last year, found a second wind, and a break brought him level at 3-3.
+
+Nishioka squandered four break points as a tie-break was required, and Murray made his opponent pay – the former hitting a stray backhand into the net.
+
+Both players held serve in a tense fourth set, but Nishioka had the win within his grasp when he won five successive points at 6-5.
+
+But Murray once more rallied, forcing a long return from Nishioka before two successive points teed up another tie-break.
+
+Murray raced ahead and though an issue with his right foot threatened to derail his display, the eight-time slam runner-up fought through the pain to take the set.
+
+Nishioka clinched the initiative with the first break of the decider courtesy of a double fault, only for Murray to respond immediately with an exquisitely lofted backhand.
+
+A misjudged lob from Nishioka moved Murray to within a game of an incredible triumph – one which was sealed by another delicate lob. </span>
+      </div>
+      
+      <div class="news">
+        <h2>Australia achieve third win in 3-0 match over Tunisia</h2>
+        <img src="index/vollyball.jpg"width="100%" height="650px;"/><br/>
+        <span>Australia captain Thomas Edgar managed 16 attacks and two blocks to win the Most Impressive Player award. Samuel Walker helped out with 11 more points for coach Roberto Santilli’s squad.
+
+Edgar got off to good start in the first set, successfully launching six attacks to prove that Team Australia simply had more firepower in them, even in their tentative moments.
+
+Tunisia put in good effort with Elyes Karamosli and Mohamed Ali Ben Othmen Miladi swinging from the flanks. However, Tunisia’s lapses in reception could not avoid a 19-25 result in the first set.
+
+The Tunisian side started to impose a better level of volleyball by the second set. They were able to pass the ball and set up Hamza Nagga for some solid spikes.
+
+Australia initiated tighter defence and netted some points with Jacob Ross Guymer and Max Staples up front. Edgar continued to be an imposing, towering presence and sent a powerful slammer to close the second set, 25-17.
+
+Coach Fathi Mkaouar’s team needed to avoid playing the chasing game in the third set. Their predicament required error-free reception so they could designate their hitters to do the job.
+
+Tunisia tried this prescription to remedy their woes. They passed the ball better to give rise to more attempts in attack.
+
+Australia maintained their effort in blocking to make their opponents miscalculate swings, all the way to a 25-19 finish in the third set. </span>
+      </div>
+      
+      <div class="news">
+        <h2>Hamilton leads the way as Mercedes dominate practice at Monza</h2>
+        <img src="index/race.jpg"width="100%" height="650px;"/><br/>
+        <span>Mercedes dominated free practice at the Italian Grand Prix on Friday, with Lewis Hamilton setting the fastest time of the day.
+
+Hamilton clocked a time of one minute, 20.192 seconds in FP2 at Monza to ensure Mercedes finished both sessions in the top two positions.
+
+Valtteri Bottas was quicker in FP1, so the reigning champion is expecting a close battle with his team-mate in qualifying on Saturday.
+
+"It felt like we made some improvement from FP1 to FP2. FP1 it didn't feel great. FP2 we made some steps in the right direction, so it's going to be close between us," Hamilton told Sky Sports.
+
+"I think we have a few more steps to make and I know it'll be where I want it to be ... Valtteri's quick round here so it's likely to be a bit closer than somewhere like Spa."
+
+McLaren driver Lando Norris got closest to the Silver Arrows but was still over half a second slower, while Pierre Gasly's impressive day saw him go fourth quickest.
+
+Daniel Ricciardo was 15th but would have placed third had his fastest lap not been deleted for exceeding the track limits.
+
+Max Verstappen suffered the same fate and was fifth in the standings after running wide at turn 11.
+
+The Dutchman also brought out the red flags when he span off during the first session and required repairs to his front wing which kept him off track for 20 minutes.
+
+"Not a good day. Struggling with balance and grip in general, so I've got a bit of work to do," Verstappen said.
+
+"Yeah, just trying to find the limits [on the lap that was deleted]. Sometimes you just let it run wide. In practice it doesn't really matter.
+
+"[Tyre wear] is not great, but first we have to solve our grip issues. Then if we have a balanced car the tyre wear should be okay."
+
+Ferrari look set for another disappointing weekend, with Charles Leclerc and Sebastian Vettel going off track and spinning out respectively at the Lesmos in FP2.</span>
+      </div>
+      
+     </div>
+    </div>
+      <div class="footer">
+        <div class="footerlogo">
+          <a href="home.html"><img src="logo.png" style="margin:20px 60px;"/></a><br/>
+          <a href="home.html"><img src="index/face.png" width="50px"height="50px" style="margin-left:56px;"/></a>
+          <a href="home.html"><img src="index/twiter.png"width="50px"height="50px"/></a>
+          <a href="home.html"><img src="index/youtube.png"width="50px"height="50px"/></a>
+          <a href="home.html"><img src="index/gmail.png"width="50px"height="50px"/style="margin-left:87px;"></a>
+          <a href="home.html"><img src="index/whatsapp.png"width="50px"height="50px"/></a><br/><br/><br/>
+          <a href="home.html"><img src="index/location.png" style="margin-left:87px;"/>location</a>
+        </div>
+        <div class="footerproducts">
+          <h2 style="margin-top:40px; color:#FFF5D0">news</h2>
+          <a href="brands.html">Clubs</a><br/>
+          <a href="#">Teams</a><br/>
+          <a href="#">Players</a><br/>
+          <a href="#">Race</a><br/>
+          <a href="#">other</a><br/>
+        </div>
+        <div class="footersports">
+           <h2 style="margin-top:40px; color:#FFF5D0">sports</h2>
+          <a href="#">Soccer</a><br/>
+          <a href="#">Running</a><br/>
+          <a href="#">Basketball</a><br/>
+          <a href="#">Football</a><br/>
+          <a href="#">Outdoor</a><br/>
+          <a href="#">Golf</a><br/>
+          <a href="#">Baseball</a><br/>
+          <a href="#">Tennis</a><br/>
+          <a href="#">Skateboarding</a><br/>
+          <a href="#">Training</a><br/>
+        </div>
+        <div class="footercompanyinfo">
+          <h2 style="margin-top:40px; color:#FFF5D0">companyinfo</h2>
+          <a href="about.html">About Us</a><br/>
+          <a href="#">Students</a><br/>
+          <a href="#">adidas Stories</a><br/>
+          <a href="#">adidas Apps</a><br/>
+          <a href="#">Sustainability</a><br/>
+          <a href="#">Creators Club</a><br/>
+          <a href="#">Affiliates</a><br/>
+          <a href="#">Press</a><br/>
+          <a href="#">Careers</a><br/>
+          <a href="#">Gift Cards</a><br/>
+        </div>
+        <div class="footersupport">
+           <h2 style="margin-top:40px; color:#FFF5D0">support</h2>
+          <a href="contact.html">contact us</a><br/>
+          <a href="#">Returns & Exchanges</a><br/>
+          <a href="#">Help</a><br/>
+          <a href="#">Shipping</a><br/>
+          <a href="#">Order Tracker</a><br/>
+          <a href="#">Store Locator</a><br/>
+          <a href="#">Size Charts</a><br/>
+          <a href="#">Gift Card Balance</a><br/>
+        </div>
+      </div>
+  </body>
+</html>
